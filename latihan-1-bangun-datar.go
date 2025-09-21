@@ -71,7 +71,7 @@ func persegi(){
 	
 	switch choice{
 		case 1:
-			fmt.Print("Keliling Persegi")
+			hitungKelilingPersegi()
 		case 2:
 			hitungLuasPersegi()
 		case 0:
@@ -79,6 +79,18 @@ func persegi(){
 		default:
 			fmt.Println("Silahkan memilih dengan benar")
 	}
+}
+
+func hitungKelilingPersegi(){
+	var s float64
+	fmt.Print("Masukan sisi : ")
+	fmt.Scan(&s)
+	result := kelilingPersegi(s)
+	fmt.Println("Jadi keliling persegi dengan sisi ", s, " adalah : ", result)
+}
+
+func kelilingPersegi(s float64)float64{
+	return 4 * s
 }
 
 func hitungLuasPersegi(){
